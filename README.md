@@ -15,8 +15,7 @@ recursions.
         It begins with two 2D points p1 and p2. If this is the base case (indicated by recursion level 0), you simply
         draw a line connecting these two points. If this is not the base case, you need to compute the intermediate
         points p3, p4, p5 and recursively call drawKochCurve on the four subdivided segments (p1-p3, p3-p4, p4-p5,
-        p5-p2). Point2D Class. The Fractal program uses Java’s Point2D class, which represents a point (x, y) in 2D. You can
-        check the specification of this class here: https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html
+        p5-p2). Point2D Class. The Fractal program uses Java’s Point2D class, which represents a point (x, y) in 2D.
     </li>
     <li>
         The Turtle Class helps one to compute the intermediate points on the Koch curve. In Turtle.java, the constructor takes a starting point and a target point. 
@@ -71,3 +70,6 @@ recursions.
         it’s no longer part of the shape); then apply recursion on each of the remaining eight sub-squares.
        </li>
    </ul>
+   
+<h3> Final Results <h3>
+  
