@@ -9,8 +9,8 @@ User Interface (GUI) that shows the fractals and provides basic controls such as
 recursions.
 
 
-   <h3>Koch Curve</h3>
-   <ul>
+<h3> Koch Curve </h3>
+  <ul>
     <li>
         It begins with two 2D points p1 and p2. If this is the base case (indicated by recursion level 0), you simply
         draw a line connecting these two points. If this is not the base case, you need to compute the intermediate
@@ -30,19 +30,19 @@ recursions.
         create a new Turtle object with p1 as the starting point and p2 as the target point. You calculate the distance
         d between the two points. Then you let the turtle move a distance of d/3. Now use the turtle’s getPosition
         method to obtain its current location, and that’s p3. Next, call turnLeft(60) to let the turtle turn left by 60
-        degrees, and move(d/3) again to move it to point p4. You can similarly find point p5. See the left picture below
-        for illustration.</li>
+        degrees, and move(d/3) again to move it to point p4. You can similarly find point p5.
+   </li>
    </ul>
 
-   <h3>Tree</h3>
+<h3> Tree </h3>
    <ul>
        <li>
-           Similar to before, I started with two 2D points p1 and p2. If this is the base case (level is 0), you simply draw
-           a line connecting the two points. Otherwise, you need to compute the intermediate points p3, p4, p5. As before, d is the distance from p1 to p2; p3 is the point along p1-p2 but d/3 on the way,
-           and this is where the tree starts to branch out. One branch turns 60 degrees to the left, reaching p4, and the
-           distance between p3-p4 is 32 d. The other branch turns 15 degrees to the right, reaching p5, and the distance
-           between p3-p5 is also 23 d. Given these, you can use the Turtle class to help you compute points p3, p4, p5, and
-           then you should 1) draw a line from p1 to p3 2) recursively call drawTree on segments p3-p4 and p3-p5 respectively.
+           Similar to before, I started with two 2D points p1 and p2. If this is the base case (level is 0), you simply draw a line connecting the two points.  
+          Otherwise, you need to compute the intermediate points p3, p4, p5. As before, d is the distance from p1 to p2; p3 is the point along p1-p2 but d/3 on the 
+          way, and this is where the tree starts to branch out. One branch turns 60 degrees to the left, reaching p4, and the distance between p3-p4 is 32 d. 
+          The other branch turns 15 degrees to the right, reaching p5, and the distance between p3-p5 is also 23 d. Given these, you can use the Turtle class to 
+          help you compute points p3, p4, p5, and then you should 1) draw a line from p1 to p3 2) recursively call drawTree on segments p3-p4 and p3-p5 
+          respectively.
         </li>
     <li>
         In the draw() method, I have doubled the recursion level for the “tree” case. So in the FractalGUI, each tick of
@@ -51,19 +51,18 @@ recursions.
     </li>
 </ul>
     
-  <h3>Sierpinski Triangle</h3> 
+<h3> Sierpinski Triangle </h3> 
   <ul>
     <li>
         The Sierpinski Triangle is a 2D fractal shape. I started with three points p1, p2, p3 that define an equilateral
-    triangle. If this is the base case, you simply draw the triangle (by calling the drawTriangle method already
-    provided to you). Otherwise, you split it into four equal sub-triangles (by finding the midpoints on each side
-    of the triangle); remove the middle sub-triangle (i.e. don’t do recursion on the middle sub-triangle); and then
-    apply recursion on each of the remaining three sub-triangles.
+        triangle. If this is the base case, you simply draw the triangle (by calling the drawTriangle method already
+        provided to you). Otherwise, you split it into four equal sub-triangles (by finding the midpoints on each side
+        of the triangle); remove the middle sub-triangle (i.e. don’t do recursion on the middle sub-triangle); and then
+        apply recursion on each of the remaining three sub-triangles.
     </li>
-
   </ul>
     
-   <h3>Sierpinski Carpet</h3>
+<h3> Sierpinski Carpet </h3>
    <ul>
        <li>
         The Sierpinski Carpet is a 2D fractal shape similar to the Triangle. I started with a square defined by the
@@ -71,5 +70,4 @@ recursions.
         to draw the square. Otherwise, you split it into 9 equal-sized sub-squares, and remove the middle sub-square (so
         it’s no longer part of the shape); then apply recursion on each of the remaining eight sub-squares.
        </li>
-
    </ul>
