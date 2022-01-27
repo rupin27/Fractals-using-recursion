@@ -10,33 +10,33 @@ recursions.
 
 <ol>
     <li><b>Koch Curve</b></li>
-    <p>
+    <div>
         It begins with two 2D points p1 and p2. If this is the base case (indicated by recursion level 0), you simply
         draw a line connecting these two points. If this is not the base case, you need to compute the intermediate
         points p3, p4, p5 and recursively call drawKochCurve on the four subdivided segments (p1-p3, p3-p4, p4-p5,
         p5-p2).
         Point2D Class. The Fractal program uses Java’s Point2D class, which represents a point (x, y) in 2D. You can
         check the specification of this class here: https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html
-    </p>
-    <p>
+    </div>
+    <div>
         The Turtle Class helps one to compute the intermediate points on the Koch curve. 
         In Turtle.java, the constructor takes a starting point and a target point. 
         This places the turtle at the starting point, and setting its direction to go towards the target point. The move method moves
         the turtle for a given distance along its current direction; the getPosition method returns its current
         position; and the turnLeft, turnRight methods cause the turtle’s direction to change by a given amount of
         degrees.
-    </p>
-    <p>
+    </div>
+    <div>
         With the Turtle class, it’s easy to compute the intermediate points for the Koch curve. Specifically, you first
         create a new Turtle object with p1 as the starting point and p2 as the target point. You calculate the distance
         d between the two points. Then you let the turtle move a distance of d/3. Now use the turtle’s getPosition
         method to obtain its current location, and that’s p3. Next, call turnLeft(60) to let the turtle turn left by 60
         degrees, and move(d/3) again to move it to point p4. You can similarly find point p5. See the left picture below
         for illustration.
-    </p>
+    </div>
 
     <li><b>Tree</b></li>
-    <p>
+    <div>
         Similar to before, I started with two 2D points p1 and p2. If this is the base case (level is 0), you simply draw
         a line connecting the two points. Otherwise, you need to compute the intermediate points p3, p4, p5, as show in
         the figure below. As before, d is the distance from p1 to p2; p3 is the point along p1-p2 but d/3 on the way,
@@ -44,26 +44,26 @@ recursions.
         distance between p3-p4 is 32 d. The other branch turns 15 degrees to the right, reaching p5, and the distance
         between p3-p5 is also 23 d. Given these, you can use the Turtle class to help you compute points p3, p4, p5, and
         then you should 1) draw a line from p1 to p3 2) recursively call drawTree on segments p3-p4 and p3-p5 respectively.
-    </p>
-    <p>
+    </div>
+    <div>
         In the draw() method, I have doubled the recursion level for the “tree” case. So in the FractalGUI, each tick of
         the slider increments the recursion level by two for the fractal tree. If you would rather see the level
         increments one by one, change max_recursion_level*2 to simply max_recursion_level in the draw() method.
-    </p>
+    </div>
 
     <li><b>Sierpinski Triangle</b></li>
-    <p>
+    <div>
         The Sierpinski Triangle is a 2D fractal shape. I started with three points p1, p2, p3 that define an equilateral
         triangle. If this is the base case, you simply draw the triangle (by calling the drawTriangle method already
         provided to you). Otherwise, you split it into four equal sub-triangles (by finding the midpoints on each side
         of the triangle); remove the middle sub-triangle (i.e. don’t do recursion on the middle sub-triangle); and then
         apply recursion on each of the remaining three sub-triangles.
-    </p>
+    </div>
 
     <li><b>Sierpinski Carpet</b></li>
-    <p>The Sierpinski Carpet is a 2D fractal shape similar to the Triangle. I started with a square defined by the
+    <div>The Sierpinski Carpet is a 2D fractal shape similar to the Triangle. I started with a square defined by the
         lower-left corner point p and the side length a. If this is the base case, you simply call drawRectangle method
         to draw the square. Otherwise, you split it into 9 equal-sized sub-squares, and remove the middle sub-square (so
         it’s no longer part of the shape); then apply recursion on each of the remaining eight sub-squares.
-    </p>
+    </div>
     </ol>
