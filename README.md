@@ -72,5 +72,4 @@ recursions.
    </ul>
    
 <h2><u> Final Results<u></h2>
-  ![alt text](https://github.com/rupin27/Fractals-using-recursion/blob/main/output/result.gif)
-  
+  <img src="https://github.com/rupin27/Fractals-using-recursion/blob/main/output/result.gif" width="48">
