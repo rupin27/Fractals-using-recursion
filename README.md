@@ -10,7 +10,8 @@ recursions.
 
 <ol>
     <li><b>Koch Curve</b></li>
-    <p>It begins with two 2D points p1 and p2. If this is the base case (indicated by recursion level 0), you simply
+    <p>
+        It begins with two 2D points p1 and p2. If this is the base case (indicated by recursion level 0), you simply
         draw a line connecting these two points. If this is not the base case, you need to compute the intermediate
         points p3, p4, p5 and recursively call drawKochCurve on the four subdivided segments (p1-p3, p3-p4, p4-p5,
         p5-p2).
