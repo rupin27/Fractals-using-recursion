@@ -65,3 +65,4 @@ recursions.
         to draw the square. Otherwise, you split it into 9 equal-sized sub-squares, and remove the middle sub-square (so
         it’s no longer part of the shape); then apply recursion on each of the remaining eight sub-squares.
     </p>
+    </ol>
