@@ -1,9 +1,7 @@
 package fractal;
-
 import java.awt.geom.Point2D;
 
 // This is a helper class to assist you in drawing fractals.
-
 public class Turtle {
   private Point2D pos; // current position
   private Point2D dir; // direction the turtle is heading to
