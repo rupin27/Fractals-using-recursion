@@ -9,7 +9,7 @@ User Interface (GUI) that shows the fractals and provides basic controls such as
 recursions.
 
 <ol>
-    <li><b>Koch Curve</b></li>
+    <li><b>Koch Curve</b>
     <div>
         It begins with two 2D points p1 and p2. If this is the base case (indicated by recursion level 0), you simply
         draw a line connecting these two points. If this is not the base case, you need to compute the intermediate
@@ -34,8 +34,9 @@ recursions.
         degrees, and move(d/3) again to move it to point p4. You can similarly find point p5. See the left picture below
         for illustration.
     </div>
+    </li>
 
-    <li><b>Tree</b></li>
+    <li><b>Tree</b>
     <div>
         Similar to before, I started with two 2D points p1 and p2. If this is the base case (level is 0), you simply draw
         a line connecting the two points. Otherwise, you need to compute the intermediate points p3, p4, p5, as show in
@@ -50,8 +51,9 @@ recursions.
         the slider increments the recursion level by two for the fractal tree. If you would rather see the level
         increments one by one, change max_recursion_level*2 to simply max_recursion_level in the draw() method.
     </div>
+        </li>
 
-    <li><b>Sierpinski Triangle</b></li>
+    <li><b>Sierpinski Triangle</b>
     <div>
         The Sierpinski Triangle is a 2D fractal shape. I started with three points p1, p2, p3 that define an equilateral
         triangle. If this is the base case, you simply draw the triangle (by calling the drawTriangle method already
@@ -59,11 +61,13 @@ recursions.
         of the triangle); remove the middle sub-triangle (i.e. don’t do recursion on the middle sub-triangle); and then
         apply recursion on each of the remaining three sub-triangles.
     </div>
+        </li>
 
-    <li><b>Sierpinski Carpet</b></li>
+    <li><b>Sierpinski Carpet</b>
     <div>The Sierpinski Carpet is a 2D fractal shape similar to the Triangle. I started with a square defined by the
         lower-left corner point p and the side length a. If this is the base case, you simply call drawRectangle method
         to draw the square. Otherwise, you split it into 9 equal-sized sub-squares, and remove the middle sub-square (so
         it’s no longer part of the shape); then apply recursion on each of the remaining eight sub-squares.
     </div>
+        </li>
     </ol>
